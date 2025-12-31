@@ -35,7 +35,7 @@ docker-compose up --build
 
 ## 🔒 Admin Features
 
-•  Read-Only Mode: Browse recipes.
+•  Visitor (Read-Only) Mode: Browse recipes.
 •  Admin Mode: (Demo password: mango123) Create & delete recipes via protected UI state.
 
 ## 🧪 Testing
@@ -61,7 +61,9 @@ npm test
 ## 💡 Key Takeaways
 
 •  Containerization: Eliminates "works on my machine" issues.
+
 •  Design Patterns: Z-pattern layout improves readability & engagement.
+
 •  Clean Code: Angular standalone components reduce boilerplate.
 
 ## 📷 Output Screenshots:
