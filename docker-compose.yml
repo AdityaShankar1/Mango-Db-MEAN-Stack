@@ -1,0 +1,29 @@
+services:
+  database:
+    image: mongo:latest
+    container_name: mangodb_container
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  backend:
+    build: ./backend
+    container_name: mango_api
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGO_URI=mongodb://database:27017/mangodb
+    depends_on:
+      - database
+
+  frontend:
+    build: ./frontend
+    container_name: mango_ui
+    ports:
+      - "4200:80"
+    depends_on:
+      - backend
+
+volumes:
+  mongo_data:
